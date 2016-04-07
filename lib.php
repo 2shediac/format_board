@@ -39,8 +39,6 @@ class format_board extends format_topics {
      */
     public function get_section_name($section) {
         global $COURSE;
-        $a = $_POST['a'];
-        ini_set('max_execution_time',300);
         $course = course_get_format($COURSE->id)->get_course();
         $section = $this->get_section($section);
         if ((string)$section->name !== '') {
